@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/ceruleun/server/issues"
   },
-  "homepage": "https://github.com/ceruleun/server#readme"
+  "homepage": "https://github.com/ceruleun/server#readme",
+  "dependencies": {
+    "ejs": "^2.5.1",
+    "express": "^4.14.0"
+  }
 }
