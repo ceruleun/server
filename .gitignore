@@ -7,8 +7,8 @@ config.yaml
 
 id_rsa_deploy.pub
 
-TODO.md
 BETA.md
+DEPLOY.md
 INSTALL.md
 README.md
-DEPLOY.md
+TODO.md

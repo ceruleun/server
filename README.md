@@ -56,7 +56,7 @@ README - раздел для документирования команд, их
  http://maxsite.org/page/how-to-put-your-project-on-github-com
  https://help.github.com/articles/set-up-git/ (наиболее доступно и быстро)
  //вспомогательные ссылки по теме:
- **https://www.youtube.com/watch?v=TCcWwUgQe8s (наглядное пособие от создания SSH до git push)
+ **https://www.youtube.com/watch?v=TCcWwUgQe8s (наглядное пособие от создания SSH до git push) !!!
    https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/ (описание создания SSH-ключей для связи облака и гита)
    https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
    http://codenamecrud.ru/basics-of-web-development/project-html-css
