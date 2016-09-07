@@ -1,0 +1,20 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "///////////////////////////примечания///////////////////////////",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ceruleun/server.git"
+  },
+  "author": "ceruleun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ceruleun/server/issues"
+  },
+  "homepage": "https://github.com/ceruleun/server#readme"
+}
