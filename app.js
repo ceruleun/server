@@ -8,14 +8,19 @@ var errorhandler = require('errorhandler');
 var log = require('winston');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var config = require('nconf');
+var router = express.Router();
 
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
-    app.set('port', 3000);
-
+    app.set('port', config.get('port'));
+    
+http.createServer(app). listen(process.env.PORT, process.env.IP, function(){
+  console.log('Express server listening on port ' + config.get('port'));
+});
 
 
 // view engine setup
@@ -28,24 +33,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-
-/*
-http.createServer(function (req, res, next) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.end('Hello World\n');
-}).listen(process.env.PORT, process.env.IP);
-console.log('Express server listening on port ' + app.get('port'));
-*/
-
-//listen(app.get('port'));
-
-http.createServer(app). listen(process.env.PORT, process.env.IP, function(){
-  console.log('Express server listening on port ' + app.get('port'));
-});
 
 
 
@@ -57,7 +47,6 @@ app.use(function(req, res, next){
   next();
 }
 });
-
 
 app.use(function(req, res, next){
   if (req.url == '/forbidden') {
@@ -72,20 +61,17 @@ app.use(function(req, res) {
 });
 
 
-
 if (process.env.NODE_ENV === 'development') {
   // only use in development 
   app.use(errorhandler());
-} 
-
-
+}
 
 /*
 //всё, что ниже, было здесь изначально
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-app.use(logger('dev'));
+
 
 
 // catch 404 and forward to error handler
